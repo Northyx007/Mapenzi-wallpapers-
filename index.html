@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapenzi Wallpaper ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+    <div class="logo">
+        <span>❤️</span>
+        MAPENZI <b>WALLPAPER</b>
+    </div>
+
+    <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#wallpapers">Wallpapers</a>
+        <a href="#categories">Categories</a>
+        <a href="#favorites">
+            <i class="fa-solid fa-heart"></i> Favorites
+        </a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="header-actions">
+        <button class="theme-btn" id="themeBtn" title="Dark/Light Mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            <i class="fa-solid fa-heart"></i>
+            Personalized Wallpapers
+        </div>
+
+        <h1>
+            MAPENZI <span>WALLPAPER</span> ❤️
+        </h1>
+
+        <p>
+            Pata wallpaper nzuri yenye jina lako.
+            Chagua jina, preview, download na share.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#wallpapers" class="primary-btn">
+                <i class="fa-solid fa-images"></i>
+                Explore Wallpapers
+            </a>
+
+            <a href="#names" class="secondary-btn">
+                <i class="fa-solid fa-user"></i>
+                Chagua Jina
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-decoration">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+
+        <div class="hero-card">
+            <div class="hero-heart">❤️</div>
+            <h2>ABDALLAH</h2>
+            <p>Beautiful Name Wallpaper</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+<section class="search-section">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search wallpaper au jina..."
+        >
+
+        <button id="clearSearch">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NAMES ================= -->
+<section class="names-section" id="names">
+
+    <div class="section-heading">
+        <span>✨ MAJINA</span>
+        <h2>Chagua Jina Lako</h2>
+        <p>Bonyeza jina ili kuona wallpaper zake.</p>
+    </div>
+
+    <div class="name-list" id="nameList"></div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+<section class="categories" id="categories">
+
+    <div class="section-heading">
+        <span>🎨 CATEGORIES</span>
+        <h2>Chagua Style</h2>
+        <p>Filter wallpapers kulingana na style unayoipenda.</p>
+    </div>
+
+    <div class="category-list">
+
+        <button class="category-btn active" data-category="all">
+            ✨ All
+        </button>
+
+        <button class="category-btn" data-category="love">
+            ❤️ Love
+        </button>
+
+        <button class="category-btn" data-category="romantic">
+            💕 Romantic
+        </button>
+
+        <button class="category-btn" data-category="neon">
+            🔥 Neon
+        </button>
+
+        <button class="category-btn" data-category="luxury">
+            👑 Luxury
+        </button>
+
+        <button class="category-btn" data-category="dark">
+            🌌 Dark
+        </button>
+
+        <button class="category-btn" data-category="pink">
+            🌸 Pink
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WALLPAPERS ================= -->
+<section class="wallpapers-section" id="wallpapers">
+
+    <div class="section-heading">
+
+        <span>🔥 COLLECTION</span>
+
+        <h2>Wallpapers za Majina</h2>
+
+        <p>
+            Kila wallpaper ina jina moja tu.
+        </p>
+
+    </div>
+
+    <div class="wallpaper-grid" id="wallpaperGrid"></div>
+
+    <div class="no-results" id="noResults">
+        <div>😔</div>
+        <h3>Wallpaper haijapatikana</h3>
+        <p>Jaribu kutafuta jina jingine.</p>
+    </div>
+
+</section>
+
+
+<!-- ================= FAVORITES ================= -->
+<section class="favorites-section" id="favorites">
+
+    <div class="section-heading">
+
+        <span>❤️ SAVED</span>
+
+        <h2>My Favorites</h2>
+
+        <p>
+            Wallpapers ulizozipenda zitahifadhiwa hapa.
+        </p>
+
+    </div>
+
+    <div class="favorite-grid" id="favoriteGrid"></div>
+
+    <div class="empty-favorites" id="emptyFavorites">
+
+        <div class="empty-icon">
+            ❤️
+        </div>
+
+        <h3>Bado huja-save wallpaper</h3>
+
+        <p>
+            Bonyeza ❤️ kwenye wallpaper unayoipenda.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section class="about-section" id="about">
+
+    <div class="about-card">
+
+        <div class="about-icon">
+            ❤️
+        </div>
+
+        <div>
+
+            <span>ABOUT US</span>
+
+            <h2>
+                Karibu Mapenzi Wallpaper
+            </h2>
+
+            <p>
+                Mapenzi Wallpaper ni website ya wallpapers
+                nzuri zenye majina maalum. Chagua jina lako,
+                view wallpaper, download na share na marafiki.
+            </p>
+
+            <a href="#wallpapers" class="primary-btn">
+                Browse Wallpapers
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-logo">
+        ❤️ MAPENZI WALLPAPER
+    </div>
+
+    <p>
+        Beautiful wallpapers for beautiful people.
+    </p>
+
+    <div class="social-links">
+
+        <a href="#" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Mapenzi Wallpaper. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<!-- ================= PREVIEW MODAL ================= -->
+<div class="modal" id="previewModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="preview-image" id="previewImage">
+
+            <div class="preview-design">
+
+                <div class="preview-heart">
+                    ❤️
+                </div>
+
+                <h2 id="previewName">
+                    ABDALLAH
+                </h2>
+
+                <p>
+                    MAPENZI WALLPAPER
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="preview-info">
+
+            <h2 id="modalName">
+                ABDALLAH
+            </h2>
+
+            <p id="modalCategory">
+                Romantic Wallpaper
+            </p>
+
+            <div class="modal-actions">
+
+                <button class="download-btn" id="downloadBtn">
+                    <i class="fa-solid fa-download"></i>
+                    Download
+                </button>
+
+                <button class="share-btn" id="shareBtn">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    Share
+                </button>
+
+                <button class="modal-favorite" id="modalFavorite">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">
+        Done!
+    </span>
+</div>
+
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="back-top" id="backTop">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
